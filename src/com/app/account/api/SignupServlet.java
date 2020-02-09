@@ -70,8 +70,8 @@ public class SignupServlet extends HttpServlet
 	{
 		//Get the data from the request.
 		HashMap<String, Object> map =	JSONParser.getJsonDataAsMap(request);
-		String token =					JSONParser.getValueAsString(map, "token");
-		String password =				JSONParser.getValueAsString(map, "password");
+		String token =			JSONParser.getValueAsString(map, "token");
+		String password =		JSONParser.getValueAsString(map, "password");
 		
 		//Process the request.
 		SignupAPIController controller = new SignupAPIController();
