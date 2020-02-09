@@ -21,10 +21,10 @@ public class DatabaseConnection
 	/** --- DATABASE CONNECTION VARIABLES              --- **/
 	/** -------------------------------------------------- **/
     
-	private static final String MONGO_DATABASE_NAME =					"appDB";
-	private static final CodecRegistry POJO_CODEC_REGISTRY =			fromRegistries(MongoClientSettings.getDefaultCodecRegistry(), fromProviders(PojoCodecProvider.builder().automatic(true).build()));
+	private static final String MONGO_DATABASE_NAME =			"appDB";
+	private static final CodecRegistry POJO_CODEC_REGISTRY =		fromRegistries(MongoClientSettings.getDefaultCodecRegistry(), fromProviders(PojoCodecProvider.builder().automatic(true).build()));
 	private static final MongoClientSettings MONGO_DATABASE_SETTINGS =	MongoClientSettings.builder().codecRegistry(POJO_CODEC_REGISTRY).build();
-	private static final MongoClient MONGO_CLIENT =						MongoClients.create(MONGO_DATABASE_SETTINGS);
+	private static final MongoClient MONGO_CLIENT =				MongoClients.create(MONGO_DATABASE_SETTINGS);
 	
-	public static final MongoDatabase MONGO_DATABASE =					MONGO_CLIENT.getDatabase(MONGO_DATABASE_NAME);
+	public static final MongoDatabase MONGO_DATABASE =			MONGO_CLIENT.getDatabase(MONGO_DATABASE_NAME);
 }
