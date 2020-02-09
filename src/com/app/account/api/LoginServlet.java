@@ -34,9 +34,9 @@ public class LoginServlet extends HttpServlet
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
 	{
 		//Get the data from the request.
-		HashMap<String, Object> map =	JSONParser.getJsonDataAsMap(request);
-		String email =					JSONParser.getValueAsString(map, "email");
-		String password =				JSONParser.getValueAsString(map, "password");
+		HashMap<String, Object> map =		JSONParser.getJsonDataAsMap(request);
+		String email =				JSONParser.getValueAsString(map, "email");
+		String password =			JSONParser.getValueAsString(map, "password");
 		String deviceManufacturer =		JSONParser.getValueAsString(map, "deviceManufacturer");
 		String deviceProduct =			JSONParser.getValueAsString(map, "deviceProduct");
 		String browserName =			JSONParser.getValueAsString(map, "browserName");
